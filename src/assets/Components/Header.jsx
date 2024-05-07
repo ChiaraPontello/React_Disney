@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './../Images/logo.png'
+import avatar from './../Images/avatar.jpg'
 import { HiHome,
   HiMagnifyingGlass,
   HiStar,
@@ -45,8 +46,7 @@ import HeaderItem from './HeaderItem';
           <HeaderItem name={item.name} Icon={item.icon}/>
         ))}
         </div>
-        <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
-        className='w-[40px] rounded-full'/>
+        <img src={avatar} className='w-[40px] rounded-full'/>
     </div>
   )
 }

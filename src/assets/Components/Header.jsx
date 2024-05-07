@@ -38,7 +38,7 @@ import HeaderItem from './HeaderItem';
     ]
 
   return (
-    <div>
+    <div className='flex items-center gap-8'>
         <img src={logo} className='w-[80px] md:w-[115px] obj-cover' />
         {menu.map((item)=>(
           <HeaderItem name={item.name} Icon={item.icon}/>

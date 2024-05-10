@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import logo from './../assets/Images/logo.png'
 import avatar from './../assets/Images/avatar.jpg'
+import topolino from './../assets/Images/Topolino.png'
 import { HiHome,
     HiMagnifyingGlass,
     HiStar,
     HiPlayCircle,
     HiTv } from "react-icons/hi2";
+import { MdAddCircleOutline } from "react-icons/md";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import HeaderItem from './HeaderItem';
 function Header() {
@@ -69,16 +71,23 @@ function Header() {
             </div> 
         </div>
         </div>
-        <div>
-      <img src={avatar} className=' rounded-full logo' onClick={handleClick} />
+        <div className='text-white items-center gap-3
+        text-[15px] font-semibold cursor-pointer hover:underline
+        underline-offset-8 mr-20 '>
+            
+      <img src={avatar} className=' rounded-full logo ' onClick={handleClick} />
       {showList && (
-        <ul className='text-white absolute mt-3 bg-[#121212] 
-        border-[1px] border-gray-700 p-3 px-5 py-4 cursor-pointer'>
-          <li>Elemento 1</li>
-          <li>Elemento 2</li>
-          <li>Elemento 3</li>
+        <ul className='bg-[#121212] 
+        border-[1px] border-gray-700 absolute py-5 px-5'>
+          <li><img src={topolino} className=' rounded-full logo'/></li>
+          <li className='cursor-pointer hover:underline mb-3 '> Add Profile</li>
+          <li className='cursor-pointer hover:underline mb-3'>App Setting</li>
+          <li className='cursor-pointer hover:underline mb-3'>Account</li>
+          <li className='cursor-pointer hover:underline mb-3'>Help</li>
+          <li className='cursor-pointer hover:underline mb-3'>Log Out</li>
         </ul>
       )}
+        
     </div>
     </div>
   )

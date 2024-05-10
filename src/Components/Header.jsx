@@ -9,6 +9,14 @@ import { HiHome,
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import HeaderItem from './HeaderItem';
 function Header() {
+    //avatar click
+        const [showList, setShowList] = useState(false);
+      
+        const handleClick = () => {
+          setShowList(!showList);
+        };
+    
+//navbar
     const [toggle,setToggle]=useState(false);
     const menu=[
         {
@@ -61,8 +69,17 @@ function Header() {
             </div> 
         </div>
         </div>
-        <img src={avatar}
-        className='w-[40px] rounded-full'/>
+        <div>
+      <img src={avatar} className=' rounded-full logo' onClick={handleClick} />
+      {showList && (
+        <ul className='text-white absolute mt-3 bg-[#121212] 
+        border-[1px] border-gray-700 p-3 px-5 py-4 cursor-pointer'>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+        </ul>
+      )}
+    </div>
     </div>
   )
 }
